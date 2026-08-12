@@ -16,7 +16,7 @@ const GALLERY = [IMAGES.barHero, IMAGES.ambassador, IMAGES.gymFloor];
 export default function ProductPage() {
   return (
     <>
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:gap-12 py-12 sm:py-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div className="space-y-3">
           <div className="rounded-xs border border-line bg-surface p-2">
             <Image
@@ -47,20 +47,27 @@ export default function ProductPage() {
         </div>
 
         <div>
-          <p className="t-label text-xs text-lime">{FLAVORS[0].name}</p>
-          <h1 className="t-display mt-3 text-[clamp(2.25rem,5vw,3.5rem)] text-paper">
+          <p>
+            <span className="t-label inline-flex bg-lime px-2.5 py-1 text-[0.65rem] text-ink">
+              {FLAVORS[0].name}
+            </span>
+          </p>
+          <h1 className="t-display mt-3 text-[clamp(2.25rem,5vw,3.5rem)] text-balance text-ink">
             Muscula Protein Bar
           </h1>
           <p className="t-body mt-5 text-lg text-muted">
             Great taste meets premium nutrition. Chocolate-coated, packed with cashew, and loaded with 27g of protein.
           </p>
 
-          <dl className="mt-8 grid grid-cols-3 rounded-xs border border-line bg-surface/50">
+          <dl className="mt-8 grid grid-cols-3 rounded-xs border border-line bg-surface">
             {MACROS.map((macro, i) => (
-              <div key={macro.label} className={`px-4 py-5 ${i > 0 ? "border-l border-line" : ""}`}>
-                <dd className="t-numeral text-3xl text-lime">
+              <div
+                key={macro.label}
+                className={`px-3 py-5 sm:px-4 ${i > 0 ? "border-l border-line" : ""}`}
+              >
+                <dd className="t-numeral text-3xl text-ink">
                   {macro.value}
-                  <span className="t-label ml-0.5 text-[0.38em]">{macro.unit}</span>
+                  <span className="t-label ml-0.5 text-[0.38em] text-muted">{macro.unit}</span>
                 </dd>
                 <dt className="t-label mt-2 text-[0.6rem] text-muted">{macro.label}</dt>
               </div>
@@ -74,9 +81,9 @@ export default function ProductPage() {
       </div>
 
       <Reveal className="border-t border-line">
-        <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:gap-12 py-14 sm:py-20 lg:grid-cols-2 lg:gap-16">
           <div data-reveal>
-            <h2 className="t-display text-2xl text-paper">Nutrition per bar</h2>
+            <h2 className="t-display text-2xl text-ink">Nutrition per bar</h2>
             <p className="t-body mt-2 mb-6 text-xs text-muted">
               Nutrition facts panel.
             </p>
@@ -87,12 +94,12 @@ export default function ProductPage() {
                     <th
                       scope="row"
                       className={`t-body py-3 text-sm font-normal ${
-                        row.indent ? "pl-5 text-muted" : "text-paper"
+                        row.indent ? "pl-5 text-muted" : "text-ink"
                       }`}
                     >
                       {row.label}
                     </th>
-                    <td className="t-numeral py-3 text-right text-sm text-paper tabular-nums">
+                    <td className="t-numeral py-3 text-right text-sm text-ink tabular-nums">
                       {row.amount}
                     </td>
                   </tr>
@@ -102,15 +109,15 @@ export default function ProductPage() {
           </div>
 
           <div data-reveal>
-            <h2 className="t-display text-2xl text-paper">Ingredients</h2>
+            <h2 className="t-display text-2xl text-ink">Ingredients</h2>
             <p className="t-body mt-6 text-muted">{INGREDIENTS}</p>
 
-            <h3 className="t-display mt-10 text-xl text-paper">Flavours</h3>
+            <h3 className="t-display mt-10 text-xl text-ink">Flavours</h3>
             <ul className="mt-4 flex flex-wrap gap-2">
               {FLAVORS.map((flavor) => (
                 <li
                   key={flavor.id}
-                  className="t-label rounded-xs border border-lime px-4 py-2 text-xs text-lime"
+                  className="t-label rounded-xs bg-lime px-4 py-2 text-xs text-ink"
                 >
                   {flavor.name}
                 </li>

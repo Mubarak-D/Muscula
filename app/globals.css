@@ -1,19 +1,24 @@
 @import "tailwindcss";
 
-/* Palette sampled from the brand assets, not invented.
-   #0A0A0A is the exact background of the logo file.
-   Lime is the logo's bolt. Moss is the green from their marketing chevrons,
-   and is only ever used for geometry, never for text: it fails contrast as a text colour. */
-@theme {
-  --color-ink: #ffffff;
-  --color-surface: #f4f4f7;
-  --color-line: #e4e4e7;
-  --color-lime: #16a34a;
-  --color-moss: #15803d;
-  --color-muted: #52525b;
-  --color-paper: #09090b;
+/* Light system. The ground is warm off-white rather than #fff: this gets read on
+   a phone, often outdoors, and paper is easier to sit on than a lit panel.
 
-  --font-display: var(--font-archivo), "Segoe UI", system-ui, sans-serif;
+   The one binding rule: LIME IS A FILL, NEVER A TEXT COLOUR. #C7F63D is the
+   logo's bolt and it is 1.6:1 against the ground, so as type it is unreadable.
+   As a plate with ink on top it is 15.7:1. Chips, the macro plate, the chevron
+   geometry, the nav underline, the selection highlight. Nowhere else.
+   Moss is the second green from their marketing chevrons and is geometry only. */
+@theme {
+  --color-paper: #fafaf7;
+  --color-surface: #ffffff;
+  --color-line: #e4e2db;
+  --color-ink: #0a0a0a;
+  --color-muted: #57534e;
+  --color-lime: #c7f63d;
+  --color-moss: #309d04;
+  --color-alert: #b42318;
+
+  --font-display: var(--font-archivo), "Arial Narrow", system-ui, sans-serif;
 
   --radius-xs: 2px;
   --radius-sm: 2px;
@@ -28,7 +33,15 @@
     font-variation-settings: "wdth" 125, "wght" 900;
     text-transform: uppercase;
     letter-spacing: -0.015em;
-    line-height: 0.9;
+    /* 0.9 is right for the big desktop cuts and too tight for a wrapped phone
+       headline, where two 900-weight lines collide. Relaxed below 640. */
+    line-height: 0.95;
+  }
+
+  @media (width >= 40rem) {
+    .t-display {
+      line-height: 0.9;
+    }
   }
 
   .t-numeral {
@@ -55,7 +68,9 @@
     border: 1px solid var(--color-line);
     background: var(--color-surface);
     padding: 0.75rem 1rem;
-    color: var(--color-paper);
+    color: var(--color-ink);
+    /* 16px floor: anything smaller and iOS Safari zooms the page on focus. */
+    font-size: 1rem;
     font-variation-settings: "wdth" 100, "wght" 400;
     transition: border-color 150ms ease;
   }
@@ -69,22 +84,26 @@
   }
 
   .input:focus {
-    border-color: var(--color-lime);
+    border-color: var(--color-ink);
+  }
+
+  .input[aria-invalid="true"] {
+    border-color: var(--color-alert);
   }
 }
 
 @layer base {
   html {
-    background: var(--color-ink);
+    background: var(--color-paper);
     -webkit-text-size-adjust: 100%;
-    /* Has to sit on html as well as body. With it on body alone the document
-       element still scrolls, which showed up as a 1px sideways drag on mobile. */
+    /* Insurance, not load-bearing: every known overflow source is fixed. If this
+       ever starts mattering again, find the element, do not widen the bandage. */
     overflow-x: hidden;
   }
 
   body {
-    background: var(--color-ink);
-    color: var(--color-paper);
+    background: var(--color-paper);
+    color: var(--color-ink);
     font-family: var(--font-display);
     font-variation-settings: "wdth" 100, "wght" 400;
     font-size: 16px;
@@ -92,9 +111,9 @@
     overflow-x: hidden;
   }
 
-  /* Lime on near-black is 15.7:1, so the ring is legible without a halo. */
+  /* Ink, not lime. Lime on paper is 1.6:1, which is not a focus ring. */
   :focus-visible {
-    outline: 2px solid var(--color-lime);
+    outline: 2px solid var(--color-ink);
     outline-offset: 3px;
   }
 
@@ -113,6 +132,36 @@
 
   .marquee-track {
     animation: marquee 32s linear infinite;
+  }
+
+  /* Lime laid behind text like a marker stroke, sized to the text box. This is
+     the only way lime gets near type without being type. */
+  .swipe {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .swipe::before {
+    content: "";
+    position: absolute;
+    inset: -0.15em -0.28em;
+    z-index: -1;
+    background: var(--color-lime);
+  }
+
+  /* Bottom bar clearance on iOS, where the home indicator eats the last 34px. */
+  .pb-safe {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* The fixed buy bar covers the last ~75px of the document, which is the end of
+   the footer. :has() pays for the clearance only on the page that has the bar,
+   which beats a spacer div inside the product column, where the gap lands
+   mid-page instead of at the bottom. */
+@media (width < 64rem) {
+  body:has(.buy-bar) footer {
+    padding-bottom: 5.5rem;
   }
 }
 

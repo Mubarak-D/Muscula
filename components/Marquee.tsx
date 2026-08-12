@@ -39,7 +39,7 @@ export function Marquee() {
                 className="h-40 w-full object-cover"
               />
               <div className="px-4 py-3">
-                <p className="t-display text-sm text-paper">{item.name}</p>
+                <p className="t-display text-sm text-ink">{item.name}</p>
                 <p className="t-label mt-1 text-[0.6rem] text-muted">{item.note}</p>
               </div>
             </li>

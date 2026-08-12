@@ -16,9 +16,9 @@ export default function AboutPage() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-line">
-        <Chevrons className="absolute top-0 right-8 h-24 opacity-80" count={2} />
-        <div className="mx-auto max-w-6xl px-5 py-20">
-          <h1 className="t-display max-w-3xl text-[clamp(2.25rem,6vw,4.25rem)] text-paper">
+        <Chevrons className="absolute top-0 right-8 h-24" count={2} />
+        <div className="mx-auto max-w-6xl px-5 py-14 sm:py-20">
+          <h1 className="t-display max-w-3xl text-[clamp(2.25rem,6vw,4.25rem)] text-balance text-ink">
             We started on the gym floor
           </h1>
           <p className="t-body mt-6 max-w-xl text-lg text-muted">
@@ -28,9 +28,9 @@ export default function AboutPage() {
       </section>
 
       <Reveal className="border-b border-line">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-14 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="space-y-5">
-            <h2 data-reveal className="t-display text-3xl text-paper">
+            <h2 data-reveal className="t-display text-3xl text-ink">
               Get it where you use it
             </h2>
             <p data-reveal className="t-body text-muted">
@@ -55,8 +55,8 @@ export default function AboutPage() {
       </Reveal>
 
       <Reveal className="border-b border-line">
-        <div className="mx-auto max-w-6xl px-5 py-20">
-          <h2 data-reveal className="t-display text-3xl text-paper">
+        <div className="mx-auto max-w-6xl px-5 py-14 sm:py-20">
+          <h2 data-reveal className="t-display text-3xl text-ink">
             Our partners
           </h2>
           <p data-reveal className="t-body mt-4 mb-10 max-w-lg text-muted">
@@ -79,7 +79,7 @@ export default function AboutPage() {
                   className="h-56 w-full object-cover"
                 />
                 <div className="px-5 py-4">
-                  <h3 className="t-display text-lg text-paper">{partner.name}</h3>
+                  <h3 className="t-display text-lg text-ink">{partner.name}</h3>
                   <p className="t-label mt-1 text-[0.6rem] text-muted">{partner.note}</p>
                 </div>
               </li>
@@ -89,14 +89,14 @@ export default function AboutPage() {
       </Reveal>
 
       <Reveal>
-        <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-5 py-24 sm:flex-row sm:items-center sm:justify-between">
-          <h2 data-reveal className="t-display max-w-xl text-[clamp(2rem,4.5vw,3rem)] text-paper">
+        <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-5 py-16 sm:py-24 sm:flex-row sm:items-center sm:justify-between">
+          <h2 data-reveal className="t-display max-w-xl text-[clamp(2rem,4.5vw,3rem)] text-balance text-ink">
             Try the protein bar the gyms are talking about
           </h2>
           <Link
             data-reveal
             href="/product"
-            className="t-label inline-flex min-h-13 shrink-0 items-center rounded-xs bg-lime px-9 py-4 text-xs text-white transition-colors hover:opacity-90 active:translate-y-px"
+            className="t-label inline-flex min-h-13 shrink-0 items-center rounded-xs bg-ink px-9 py-4 text-xs text-paper transition-opacity hover:opacity-88 active:translate-y-px"
           >
             Choose a pack
           </Link>

@@ -22,19 +22,19 @@ export default function ConfirmationPage() {
   }, []);
 
   if (!ready) {
-    return <div className="mx-auto max-w-3xl px-5 py-24" />;
+    return <div className="mx-auto max-w-3xl px-5 py-16 sm:py-24" />;
   }
 
   if (!order) {
     return (
-      <div className="mx-auto max-w-3xl px-5 py-24 text-center">
-        <h1 className="t-display text-3xl text-paper">No order to display</h1>
+      <div className="mx-auto max-w-3xl px-5 py-16 sm:py-24 text-center">
+        <h1 className="t-display text-3xl text-ink">No order to display</h1>
         <p className="t-body mt-4 text-muted">
           This page shows a summary after placing an order.
         </p>
         <Link
           href="/product"
-          className="t-label mt-8 inline-flex min-h-12 items-center rounded-xs bg-lime px-7 text-xs text-white hover:opacity-90"
+          className="t-label mt-8 inline-flex min-h-12 items-center rounded-xs bg-ink px-7 text-xs text-paper hover:opacity-88"
         >
           Choose a pack
         </Link>
@@ -43,9 +43,13 @@ export default function ConfirmationPage() {
   }
 
   return (
-    <div className="mx-auto max-w-3xl px-5 py-20">
-      <p className="t-label text-xs text-lime">Order confirmed</p>
-      <h1 className="t-display mt-4 text-[clamp(2.25rem,5vw,3.5rem)] text-paper">
+    <div className="mx-auto max-w-3xl px-5 py-14 sm:py-20">
+      <p>
+        <span className="t-label inline-flex bg-lime px-2.5 py-1 text-[0.65rem] text-ink">
+          Order confirmed
+        </span>
+      </p>
+      <h1 className="t-display mt-4 text-[clamp(2.25rem,5vw,3.5rem)] text-balance text-ink">
         Thanks, {order.name.split(" ")[0]}
       </h1>
 
@@ -62,19 +66,19 @@ export default function ConfirmationPage() {
         </dl>
       </div>
 
-      <div className="mt-8 rounded-xs border border-lime/40 bg-surface p-6">
-        <h2 className="t-display text-lg text-paper">What happens next?</h2>
+      <div className="mt-8 rounded-xs border border-line bg-surface p-6">
+        <h2 className="t-display text-lg text-ink">What happens next?</h2>
         <p className="t-body mt-3 text-sm text-muted">
           The Muscula team will call {order.phone} to confirm the address and coordinate delivery.
         </p>
-        <p className="t-body mt-4 text-sm text-lime">
+        <p className="t-body mt-4 text-sm text-muted">
           This is a demo. No charges have been made.
         </p>
       </div>
 
       <Link
         href="/"
-        className="t-label mt-10 inline-flex min-h-12 items-center border-b border-lime pb-1 text-xs text-lime hover:text-paper"
+        className="t-label mt-10 inline-flex min-h-12 items-center border-b-2 border-lime pb-1 text-xs text-ink hover:opacity-70"
       >
         Back to home
       </Link>
@@ -86,7 +90,7 @@ function Row({ label, value, mono }: { label: string; value: string; mono?: bool
   return (
     <div className="flex flex-wrap items-start justify-between gap-4 px-5 py-4">
       <dt className="t-label text-xs text-muted">{label}</dt>
-      <dd className={`${mono ? "t-numeral tabular-nums" : "t-body"} max-w-sm text-right text-sm text-paper`}>
+      <dd className={`${mono ? "t-numeral tabular-nums" : "t-body"} max-w-sm text-right text-sm text-ink`}>
         {value}
       </dd>
     </div>

@@ -123,7 +123,7 @@ export function CheckoutForm() {
   return (
     <form ref={formRef} onSubmit={handleSubmit} noValidate className="space-y-8">
       <fieldset className="space-y-5">
-        <legend className="t-display mb-4 text-xl text-paper">Delivery details</legend>
+        <legend className="t-display mb-4 text-xl text-ink">Delivery details</legend>
 
         <Field
           name="name"
@@ -138,6 +138,7 @@ export function CheckoutForm() {
             required
             autoComplete="name"
             aria-describedby="name-hint"
+            aria-invalid={errors.name ? true : undefined}
             className="input"
           />
         </Field>
@@ -155,6 +156,7 @@ export function CheckoutForm() {
             rows={3}
             autoComplete="street-address"
             aria-describedby="address-hint"
+            aria-invalid={errors.address ? true : undefined}
             className="input resize-y"
           />
         </Field>
@@ -174,13 +176,14 @@ export function CheckoutForm() {
             autoComplete="tel"
             inputMode="tel"
             aria-describedby="phone-hint"
+            aria-invalid={errors.phone ? true : undefined}
             className="input"
           />
         </Field>
       </fieldset>
 
       <fieldset>
-        <legend className="t-display mb-2 text-xl text-paper">How to order</legend>
+        <legend className="t-display mb-2 text-xl text-ink">How to order</legend>
         <p className="t-body mb-4 text-sm text-muted">
           Both methods are presented for demo purposes.
         </p>
@@ -207,7 +210,7 @@ export function CheckoutForm() {
         <button
           type="submit"
           disabled={empty}
-          className="t-label inline-flex min-h-13 w-full items-center justify-center rounded-xs bg-lime px-8 py-4 text-xs text-white transition-colors hover:opacity-90 active:translate-y-px disabled:cursor-not-allowed disabled:bg-surface disabled:text-muted"
+          className="t-label inline-flex min-h-13 w-full items-center justify-center rounded-xs bg-ink px-8 py-4 text-xs text-paper transition-opacity hover:opacity-88 active:translate-y-px disabled:cursor-not-allowed disabled:bg-surface disabled:text-muted"
         >
           {method === "pay" ? `Pay ${formatLKR(total)}` : "Order via WhatsApp"}
         </button>
@@ -234,14 +237,14 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="t-label mb-2 block text-xs text-paper">
+      <label htmlFor={name} className="t-label mb-2 block text-xs text-ink">
         {label}
       </label>
       {children}
       {/* Same id either way, so aria-describedby always resolves to whichever
           of the two is currently rendered. */}
       {error ? (
-        <p id={`${name}-hint`} role="alert" className="t-body mt-2 text-xs text-lime">
+        <p id={`${name}-hint`} role="alert" className="t-body mt-2 text-xs text-alert">
           {error}
         </p>
       ) : (
@@ -269,7 +272,7 @@ function MethodOption({
   return (
     <label
       className={`cursor-pointer rounded-xs border p-5 transition-colors ${
-        checked ? "border-lime bg-surface" : "border-line bg-ink hover:border-muted"
+        checked ? "border-ink bg-surface ring-1 ring-ink" : "border-line bg-paper hover:border-muted"
       }`}
     >
       <span className="flex items-center gap-3">
@@ -279,9 +282,9 @@ function MethodOption({
           value={value}
           checked={checked}
           onChange={() => onChange(value)}
-          className="h-4 w-4 accent-lime"
+          className="h-4 w-4 shrink-0 accent-ink"
         />
-        <span className="t-display text-base text-paper">{title}</span>
+        <span className="t-display text-base text-ink">{title}</span>
       </span>
       <span className="t-body mt-2 block text-xs text-muted">{body}</span>
     </label>

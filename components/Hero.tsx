@@ -24,44 +24,61 @@ export function Hero() {
 
   return (
     <section ref={ref} className="relative overflow-hidden border-b border-line">
-      <Chevrons className="absolute top-0 left-0 h-28 opacity-90" count={3} />
+      {/* Phone screens have no margin to spare: the chevrons land on top of the
+          lime kicker at 360px, lime on lime. Decoration loses that argument. */}
+      <Chevrons className="absolute top-0 left-0 hidden h-28 sm:flex" count={3} />
 
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 pt-20 pb-16 lg:grid-cols-[1.3fr_0.7fr] lg:items-center lg:gap-14 lg:pt-24 lg:pb-20">
-        <div>
-          <p data-hero-line className="t-label mb-6 text-xs text-lime">
-            Made in Sri Lanka
+      {/* Three grid children rather than two, so the phone order can be
+          claim → product → copy → buttons while the desktop split stays a
+          two-column with the panel spanning both text rows. No duplicated DOM. */}
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 pt-10 pb-14 sm:pt-16 lg:grid-cols-[1.3fr_0.7fr] lg:items-start lg:gap-x-14 lg:gap-y-9 lg:pt-24 lg:pb-20">
+        <div className="lg:col-start-1 lg:row-start-1">
+          <p data-hero-line className="mb-6">
+            <span className="t-label inline-flex bg-lime px-2.5 py-1 text-[0.65rem] text-ink">
+              Made in Sri Lanka
+            </span>
           </p>
 
-          <h1 className="t-display text-[clamp(2rem,4.4vw,3.5rem)] text-paper">
-            <span data-hero-line className="block whitespace-nowrap">
+          {/* No nowrap below 640: at a 2rem floor these lines are wider than a
+              360px phone, and the old nowrap put the overflow under the
+              overflow-x:hidden on <html> where it read as a clipped headline. */}
+          <h1 className="t-display text-[clamp(2rem,8.5vw,3.5rem)] text-ink">
+            <span data-hero-line className="block sm:whitespace-nowrap">
               Sri Lanka&rsquo;s first
             </span>
-            <span data-hero-line className="block whitespace-nowrap">
+            <span data-hero-line className="block sm:whitespace-nowrap">
               27g protein bar
             </span>
           </h1>
+        </div>
 
-          <p data-hero-line className="t-body mt-6 max-w-lg text-lg text-muted">
+        <div className="lg:col-start-1 lg:row-start-2">
+          <p data-hero-line className="t-body max-w-lg text-lg text-muted">
             The taste of a Snickers, the nutrition of a premium protein bar.
           </p>
 
-          <div data-hero-cta className="mt-9 flex flex-wrap items-center gap-4">
+          {/* Stacked full width below 640. Side by side, the tracked labels wrap
+              inside their own buttons at 360px. */}
+          <div data-hero-cta className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
             <Link
               href="/product"
-              className="t-label inline-flex min-h-12 items-center rounded-xs bg-lime px-7 text-xs text-white transition-transform hover:opacity-90 active:translate-y-px"
+              className="t-label inline-flex min-h-12 items-center justify-center rounded-xs bg-ink px-7 text-xs text-paper transition-opacity hover:opacity-88 active:translate-y-px"
             >
               Buy a 5 pack
             </Link>
             <Link
               href="/product"
-              className="t-label inline-flex min-h-12 items-center rounded-xs border border-line px-7 text-xs text-paper transition-colors hover:border-lime hover:text-lime"
+              className="t-label inline-flex min-h-12 items-center justify-center rounded-xs border border-ink px-7 text-xs text-ink transition-colors hover:bg-ink hover:text-paper active:translate-y-px"
             >
               See the numbers
             </Link>
           </div>
         </div>
 
-        <figure data-hero-panel className="rounded-xs border border-line bg-surface">
+        <figure
+          data-hero-panel
+          className="rounded-xs border border-line bg-surface lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-center"
+        >
           <Image
             src={IMAGES.barHero.src}
             width={IMAGES.barHero.w}
@@ -71,15 +88,18 @@ export function Hero() {
             sizes="(max-width: 1024px) 92vw, 470px"
             className="h-auto w-full rounded-t-xs object-cover"
           />
-          <figcaption className="grid grid-cols-3 border-t border-line">
+          {/* Desktop only. On a phone the panel now sits directly above the lime
+              macro plate, and printing 27 / 40 / 450 twice within one thumb-swipe
+              spends the reveal before the big version lands. */}
+          <figcaption className="hidden grid-cols-3 border-t border-line lg:grid">
             {MACROS.map((macro, i) => (
               <div
                 key={macro.label}
                 className={`px-4 py-4 ${i > 0 ? "border-l border-line" : ""}`}
               >
-                <p className="t-numeral text-2xl text-lime">
+                <p className="t-numeral text-2xl text-ink">
                   {macro.value}
-                  <span className="t-label ml-0.5 text-[0.42em]">{macro.unit}</span>
+                  <span className="t-label ml-0.5 text-[0.42em] text-muted">{macro.unit}</span>
                 </p>
                 <p className="t-label mt-1.5 text-[0.6rem] text-muted">{macro.label}</p>
               </div>

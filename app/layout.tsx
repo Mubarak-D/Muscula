@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo } from "next/font/google";
 import { CartProvider } from "@/lib/cart-context";
 import { Header } from "@/components/Header";
@@ -27,6 +27,16 @@ export const metadata: Metadata = {
   },
 };
 
+/** viewport-fit=cover is what makes env(safe-area-inset-*) resolve to anything
+ *  other than 0. Without it the sticky buy bar on /product sits under the iOS
+ *  home indicator. themeColor keeps the browser chrome on the paper ground. */
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#fafaf7",
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={archivo.variable}>
@@ -34,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CartProvider>
           <a
             href="#main"
-            className="t-label sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-xs focus:bg-lime focus:px-4 focus:py-2 focus:text-xs focus:text-white"
+            className="t-label sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-xs focus:bg-ink focus:px-4 focus:py-2 focus:text-xs focus:text-paper"
           >
             Skip to content
           </a>
