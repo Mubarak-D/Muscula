@@ -32,9 +32,6 @@ export function Hero() {
             Made in Sri Lanka
           </p>
 
-          {/* Sized so each line holds on one row at every breakpoint. The
-              expanded width axis eats horizontal space fast, so the ceiling is
-              lower than it would be for a normal-width face. */}
           <h1 className="t-display text-[clamp(2rem,4.4vw,3.5rem)] text-paper">
             <span data-hero-line className="block whitespace-nowrap">
               Sri Lanka&rsquo;s first
@@ -51,7 +48,7 @@ export function Hero() {
           <div data-hero-cta className="mt-9 flex flex-wrap items-center gap-4">
             <Link
               href="/product"
-              className="t-label inline-flex min-h-12 items-center rounded-xs bg-lime px-7 text-xs text-ink transition-transform hover:bg-paper active:translate-y-px"
+              className="t-label inline-flex min-h-12 items-center rounded-xs bg-lime px-7 text-xs text-white transition-transform hover:opacity-90 active:translate-y-px"
             >
               Buy a 5 pack
             </Link>

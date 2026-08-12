@@ -9,7 +9,7 @@ import { BRAND, PARTNERS } from "@/lib/products";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Muscula Nutrition is made in Sri Lanka by JNR Marketing and supplied directly to gyms.",
+    "Muscula Nutrition is a product of JNR Marketing, delivered direct to gyms.",
 };
 
 export default function AboutPage() {
@@ -19,11 +19,10 @@ export default function AboutPage() {
         <Chevrons className="absolute top-0 right-8 h-24 opacity-80" count={2} />
         <div className="mx-auto max-w-6xl px-5 py-20">
           <h1 className="t-display max-w-3xl text-[clamp(2.25rem,6vw,4.25rem)] text-paper">
-            We started in the gyms
+            We started on the gym floor
           </h1>
           <p className="t-body mt-6 max-w-xl text-lg text-muted">
-            {BRAND.name} is a product by {BRAND.parent}. It went into Sri Lankan gyms
-            first, before it went anywhere near a shelf.
+            {BRAND.name} is a product of {BRAND.parent}. Before it hit shelves, it went straight to Sri Lanka&rsquo;s leading gym floors.
           </p>
         </div>
       </section>
@@ -32,18 +31,13 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="space-y-5">
             <h2 data-reveal className="t-display text-3xl text-paper">
-              Sold where it gets used
+              Get it where you use it
             </h2>
             <p data-reveal className="t-body text-muted">
-              Most protein bars on sale here are imported, expensive, and taste like an
-              obligation. Muscula was built the other way around: get the protein number
-              high, keep it tasting like chocolate and cashew, and put it in front of
-              people mid session.
+              Most imported protein bars come at a premium. Muscula was built to deliver high protein with great chocolate and cashew taste, right where athletes need it.
             </p>
             <p data-reveal className="t-body text-muted">
-              That distribution is still gym by gym. This site is the first step toward
-              selling direct, which is why the checkout here is a demonstration rather
-              than a live store.
+              Our distribution runs through gyms. This site is the first step in reaching consumers directly.
             </p>
           </div>
 
@@ -63,11 +57,10 @@ export default function AboutPage() {
       <Reveal className="border-b border-line">
         <div className="mx-auto max-w-6xl px-5 py-20">
           <h2 data-reveal className="t-display text-3xl text-paper">
-            Who we work with
+            Our partners
           </h2>
           <p data-reveal className="t-body mt-4 mb-10 max-w-lg text-muted">
-            Gym events and local brand collaborations, mostly. It is how the bar gets
-            into hands.
+            Gym events and local brand collaborations.
           </p>
 
           <ul className="grid gap-5 sm:grid-cols-2">
@@ -98,14 +91,14 @@ export default function AboutPage() {
       <Reveal>
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-5 py-24 sm:flex-row sm:items-center sm:justify-between">
           <h2 data-reveal className="t-display max-w-xl text-[clamp(2rem,4.5vw,3rem)] text-paper">
-            Try the bar the gyms already stock
+            Try the protein bar the gyms are talking about
           </h2>
           <Link
             data-reveal
             href="/product"
-            className="t-label inline-flex min-h-13 shrink-0 items-center rounded-xs bg-lime px-9 py-4 text-xs text-ink transition-colors hover:bg-paper active:translate-y-px"
+            className="t-label inline-flex min-h-13 shrink-0 items-center rounded-xs bg-lime px-9 py-4 text-xs text-white transition-colors hover:opacity-90 active:translate-y-px"
           >
-            Pick a pack
+            Choose a pack
           </Link>
         </div>
       </Reveal>

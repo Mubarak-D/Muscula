@@ -9,7 +9,7 @@ export function Footer() {
         <div className="space-y-3">
           <Logo />
           <p className="t-body max-w-xs text-sm text-muted">
-            A product by {BRAND.parent}. Made in Sri Lanka, supplied to gyms island wide.
+            A product of {BRAND.parent}. Made in Sri Lanka, delivered to gyms island-wide.
           </p>
         </div>
 
@@ -42,8 +42,7 @@ export function Footer() {
 
       <div className="border-t border-line">
         <p className="t-label mx-auto max-w-6xl px-5 py-5 text-[0.65rem] text-muted">
-          Demonstration site. Ordering and payment are simulated, and no order is
-          placed.
+          Demo site. Ordering and payments are simulated.
         </p>
       </div>
     </footer>

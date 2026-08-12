@@ -8,7 +8,7 @@ export function CartLines() {
   const { lines, hydrated, updateQty } = useCart();
 
   if (!hydrated) {
-    return <p className="t-body py-10 text-sm text-muted">Loading your cart.</p>;
+    return <p className="t-body py-10 text-sm text-muted">Loading cart&hellip;</p>;
   }
 
   if (lines.length === 0) {
@@ -16,13 +16,13 @@ export function CartLines() {
       <div className="rounded-xs border border-line bg-surface px-6 py-12 text-center">
         <p className="t-display text-xl text-paper">Nothing in the cart yet</p>
         <p className="t-body mt-2 text-sm text-muted">
-          The 5 pack works out at {formatLKR(1200)} a bar.
+          The 5 bar pack works out to {formatLKR(1200)} per bar.
         </p>
         <Link
           href="/product"
-          className="t-label mt-7 inline-flex min-h-12 items-center rounded-xs bg-lime px-7 text-xs text-ink hover:bg-paper"
+          className="t-label mt-7 inline-flex min-h-12 items-center rounded-xs bg-lime px-7 text-xs text-white hover:opacity-90"
         >
-          Pick a pack
+          Choose a pack
         </Link>
       </div>
     );
@@ -39,7 +39,7 @@ export function CartLines() {
               <div className="min-w-40 flex-1">
                 <p className="t-display text-base text-paper">{option.name}</p>
                 <p className="t-label mt-1 text-[0.6rem] text-muted">
-                  {option.bars} {option.bars === 1 ? "bar" : "bars"} a pack
+                  {option.bars} bars per pack
                 </p>
               </div>
 
@@ -76,7 +76,7 @@ export function CartLines() {
         })}
       </ul>
 
-      <div className="rounded-xs border border-line bg-ink px-5 py-5">
+      <div className="rounded-xs border border-line bg-surface px-5 py-5">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <span className="t-label text-xs whitespace-nowrap text-muted">
             Total, {totalBars(lines)} bars
@@ -86,7 +86,7 @@ export function CartLines() {
           </span>
         </div>
         <p className="t-body mt-2 text-xs text-muted">
-          Delivery is arranged by phone after you order, so no shipping is added here.
+          Delivery is coordinated by phone after your order.
         </p>
       </div>
     </div>

@@ -42,7 +42,7 @@ export function AddToCart() {
               <label
                 key={option.id}
                 className={`flex min-h-16 cursor-pointer items-center justify-between gap-4 rounded-xs border px-5 py-4 transition-colors ${
-                  active ? "border-lime bg-surface" : "border-line bg-ink hover:border-muted"
+                  active ? "border-lime bg-surface" : "border-line bg-surface/50 hover:border-muted"
                 }`}
               >
                 <span className="flex items-center gap-3">
@@ -57,8 +57,8 @@ export function AddToCart() {
                   <span>
                     <span className="t-display block text-base text-paper">{option.name}</span>
                     <span className="t-body block text-xs text-muted">
-                      {formatLKR(pricePerBar(option))} a bar
-                      {option.bars > 1 && `, saves ${formatLKR(savingsVsSingles(option))}`}
+                      {formatLKR(pricePerBar(option))} per bar
+                      {option.bars > 1 && `, save ${formatLKR(savingsVsSingles(option))}`}
                     </span>
                   </span>
                 </span>
@@ -78,12 +78,12 @@ export function AddToCart() {
           aria-live="polite"
           className="t-label inline-flex min-h-12 flex-1 items-center justify-center rounded-xs border border-line px-6 text-xs text-paper transition-colors hover:border-lime hover:text-lime active:translate-y-px"
         >
-          {added ? "Added" : "Add to cart"}
+          {added ? "Added ✓" : "Add to cart"}
         </button>
         <button
           type="button"
           onClick={handleBuyNow}
-          className="t-label inline-flex min-h-12 flex-1 items-center justify-center rounded-xs bg-lime px-6 text-xs text-ink transition-colors hover:bg-paper active:translate-y-px"
+          className="t-label inline-flex min-h-12 flex-1 items-center justify-center rounded-xs bg-lime px-6 text-xs text-white transition-colors hover:opacity-90 active:translate-y-px"
         >
           Buy now
         </button>

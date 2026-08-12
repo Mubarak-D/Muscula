@@ -33,28 +33,27 @@ export function PriceCards() {
             {formatLKR(bundle.price)}
           </p>
           <p data-reveal className="t-body mt-3 text-sm text-muted">
-            {formatLKR(pricePerBar(bundle))} a bar. You keep{" "}
-            <span className="text-paper">{formatLKR(savingsVsSingles(bundle))}</span> against
-            buying five singles.
+            That&rsquo;s {formatLKR(pricePerBar(bundle))} per bar. Save{" "}
+            <span className="text-paper">{formatLKR(savingsVsSingles(bundle))}</span> vs buying singles.
           </p>
         </div>
 
         <button
           type="button"
           onClick={() => buy(bundle.id)}
-          className="t-label mt-9 inline-flex min-h-12 items-center justify-center rounded-xs bg-lime px-7 text-xs text-ink transition-colors hover:bg-paper active:translate-y-px"
+          className="t-label mt-9 inline-flex min-h-12 items-center justify-center rounded-xs bg-lime px-7 text-xs text-white transition-colors hover:opacity-90 active:translate-y-px"
         >
           Buy the 5 pack
         </button>
       </article>
 
-      <article className="flex flex-col justify-between rounded-xs border border-line bg-ink p-8">
+      <article className="flex flex-col justify-between rounded-xs border border-line bg-surface p-8">
         <div>
           <h3 className="t-display text-2xl text-paper">{single.name}</h3>
           <p className="t-numeral mt-5 text-3xl whitespace-nowrap text-paper sm:text-4xl">
             {formatLKR(single.price)}
           </p>
-          <p className="t-body mt-3 text-sm text-muted">One bar, {formatLKR(single.price)} a bar.</p>
+          <p className="t-body mt-3 text-sm text-muted">One bar, {formatLKR(single.price)} per bar.</p>
         </div>
 
         <button
@@ -62,7 +61,7 @@ export function PriceCards() {
           onClick={() => buy(single.id)}
           className="t-label mt-9 inline-flex min-h-12 items-center justify-center rounded-xs border border-line px-7 text-xs text-paper transition-colors hover:border-lime hover:text-lime active:translate-y-px"
         >
-          Buy one bar
+          Buy a single bar
         </button>
       </article>
     </div>

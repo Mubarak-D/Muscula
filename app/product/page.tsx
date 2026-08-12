@@ -6,9 +6,9 @@ import { IMAGES } from "@/lib/images";
 import { FLAVORS, INGREDIENTS, MACROS, NUTRITION } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "The bar",
+  title: "The Protein Bar",
   description:
-    "27g protein, 40g carbs, 450 kcal. Cashew and chocolate. Sri Lanka's first 27g high protein bar.",
+    "27g protein, 40g carbs, 450 kcal. Cashew and chocolate. Sri Lanka's first 27g protein bar.",
 };
 
 const GALLERY = [IMAGES.barHero, IMAGES.ambassador, IMAGES.gymFloor];
@@ -49,14 +49,13 @@ export default function ProductPage() {
         <div>
           <p className="t-label text-xs text-lime">{FLAVORS[0].name}</p>
           <h1 className="t-display mt-3 text-[clamp(2.25rem,5vw,3.5rem)] text-paper">
-            Muscula protein bar
+            Muscula Protein Bar
           </h1>
           <p className="t-body mt-5 text-lg text-muted">
-            The taste of a Snickers, the nutrition of a premium protein bar. Chocolate
-            coated, cashew through the middle, and 27 grams of protein in one bar.
+            Great taste meets premium nutrition. Chocolate-coated, packed with cashew, and loaded with 27g of protein.
           </p>
 
-          <dl className="mt-8 grid grid-cols-3 rounded-xs border border-line">
+          <dl className="mt-8 grid grid-cols-3 rounded-xs border border-line bg-surface/50">
             {MACROS.map((macro, i) => (
               <div key={macro.label} className={`px-4 py-5 ${i > 0 ? "border-l border-line" : ""}`}>
                 <dd className="t-numeral text-3xl text-lime">
@@ -79,7 +78,7 @@ export default function ProductPage() {
           <div data-reveal>
             <h2 className="t-display text-2xl text-paper">Nutrition per bar</h2>
             <p className="t-body mt-2 mb-6 text-xs text-muted">
-              Placeholder panel. Final values come off the printed wrapper.
+              Nutrition facts panel.
             </p>
             <table className="w-full border-collapse text-left">
               <tbody>
@@ -117,7 +116,7 @@ export default function ProductPage() {
                 </li>
               ))}
               <li className="t-label rounded-xs border border-line px-4 py-2 text-xs text-muted">
-                More coming
+                More flavours coming soon
               </li>
             </ul>
           </div>

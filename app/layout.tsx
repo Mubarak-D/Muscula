@@ -5,9 +5,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
-/** One family, loaded once, with the width axis exposed. Display, body and
- *  label styles are all cut from this by varying wdth rather than by pulling in
- *  a second and third typeface. */
 const archivo = Archivo({
   subsets: ["latin"],
   axes: ["wdth"],
@@ -37,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CartProvider>
           <a
             href="#main"
-            className="t-label sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-xs focus:bg-lime focus:px-4 focus:py-2 focus:text-xs focus:text-ink"
+            className="t-label sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-xs focus:bg-lime focus:px-4 focus:py-2 focus:text-xs focus:text-white"
           >
             Skip to content
           </a>

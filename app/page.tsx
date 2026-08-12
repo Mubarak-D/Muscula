@@ -31,25 +31,22 @@ export default function HomePage() {
 
           <div>
             <h2 data-reveal className="t-display text-[clamp(2rem,4.5vw,3.25rem)] text-paper">
-              Built for the gym floor,
+              Built for the people
               <br />
-              not the wellness aisle
+              who actually train
             </h2>
             <p data-reveal className="t-body mt-6 max-w-lg text-muted">
-              Muscula started by supplying gyms directly. Trainers ate it, then asked
-              where they could buy a box. That is the whole story, and it is why the
-              bar is built around protein rather than a flavour list.
+              Muscula started by going direct to gyms. Trainers and athletes tried it and asked how to get a box. Our focus has always been high protein count over artificial flavouring.
             </p>
             <p data-reveal className="t-body mt-4 max-w-lg text-muted">
-              Imported bars cost more and taste like a compromise. This one is made
-              here, and it tastes like a Snickers.
+              Imported protein bars come at a premium. Made right here in Sri Lanka, this one delivers great chocolate taste.
             </p>
             <Link
               data-reveal
               href="/about"
               className="t-label mt-8 inline-flex min-h-12 items-center border-b border-lime pb-1 text-xs text-lime hover:text-paper"
             >
-              Read the brand story
+              Read our story
             </Link>
           </div>
         </div>
@@ -61,8 +58,7 @@ export default function HomePage() {
             Buy by the pack
           </h2>
           <p data-reveal className="t-body mt-4 mb-10 max-w-lg text-muted">
-            One bar to try it. Five if you already know. Placeholder pricing while the
-            client settles the final numbers.
+            Grab a single bar to try, or save with the 5 bar pack.
           </p>
           <div data-reveal>
             <PriceCards />
@@ -75,14 +71,14 @@ export default function HomePage() {
       <Reveal>
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-5 py-24 sm:flex-row sm:items-center sm:justify-between">
           <h2 data-reveal className="t-display max-w-xl text-[clamp(2rem,4.5vw,3.25rem)] text-paper">
-            27 grams. One bar. Done.
+            27 grams. One bar.
           </h2>
           <Link
             data-reveal
             href="/product"
-            className="t-label inline-flex min-h-13 shrink-0 items-center rounded-xs bg-lime px-9 py-4 text-xs text-ink transition-colors hover:bg-paper active:translate-y-px"
+            className="t-label inline-flex min-h-13 shrink-0 items-center rounded-xs bg-lime px-9 py-4 text-xs text-white transition-colors hover:opacity-90 active:translate-y-px"
           >
-            Pick a pack
+            Choose a pack
           </Link>
         </div>
       </Reveal>

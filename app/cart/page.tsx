@@ -4,7 +4,7 @@ import { CheckoutForm } from "@/components/CheckoutForm";
 
 export const metadata: Metadata = {
   title: "Cart",
-  description: "Review your Muscula order and choose how to place it.",
+  description: "Review your order details and delivery information.",
 };
 
 export default function CartPage() {
@@ -12,8 +12,7 @@ export default function CartPage() {
     <div className="mx-auto max-w-6xl px-5 py-16">
       <h1 className="t-display text-[clamp(2.25rem,5vw,3.5rem)] text-paper">Your order</h1>
       <p className="t-body mt-4 max-w-lg text-muted">
-        Payment and delivery are both mocked here, so the client can see the two
-        checkout routes side by side before committing to either.
+        Review your order details and delivery information.
       </p>
 
       <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_0.85fr] lg:gap-16">

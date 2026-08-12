@@ -57,7 +57,7 @@ export function Header() {
               ref={countRef}
               aria-hidden="true"
               className={`inline-flex h-6 min-w-6 items-center justify-center rounded-xs px-1.5 text-xs tabular-nums ${
-                count > 0 ? "bg-lime text-ink" : "bg-surface text-muted"
+                count > 0 ? "bg-lime text-white" : "bg-surface text-muted"
               }`}
             >
               {hydrated ? count : 0}

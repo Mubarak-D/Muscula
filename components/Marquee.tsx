@@ -19,7 +19,7 @@ export function Marquee() {
   return (
     <section aria-labelledby="partners-heading" className="border-y border-line py-12">
       <h2 id="partners-heading" className="t-label mx-auto max-w-6xl px-5 pb-8 text-xs text-muted">
-        Seen at
+        Collaborations &amp; events
       </h2>
 
       <div className="flex overflow-hidden">

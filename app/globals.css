@@ -5,15 +5,15 @@
    Lime is the logo's bolt. Moss is the green from their marketing chevrons,
    and is only ever used for geometry, never for text: it fails contrast as a text colour. */
 @theme {
-  --color-ink: #0a0a0a;
-  --color-surface: #171717;
-  --color-line: #262626;
-  --color-lime: #c7f63d;
-  --color-moss: #309d04;
-  --color-muted: #8a8a8a;
-  --color-paper: #ffffff;
+  --color-ink: #ffffff;
+  --color-surface: #f4f4f7;
+  --color-line: #e4e4e7;
+  --color-lime: #16a34a;
+  --color-moss: #15803d;
+  --color-muted: #52525b;
+  --color-paper: #09090b;
 
-  --font-display: var(--font-archivo), "Arial Narrow", system-ui, sans-serif;
+  --font-display: var(--font-archivo), "Segoe UI", system-ui, sans-serif;
 
   --radius-xs: 2px;
   --radius-sm: 2px;

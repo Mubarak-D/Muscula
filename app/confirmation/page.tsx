@@ -28,15 +28,15 @@ export default function ConfirmationPage() {
   if (!order) {
     return (
       <div className="mx-auto max-w-3xl px-5 py-24 text-center">
-        <h1 className="t-display text-3xl text-paper">No order to show</h1>
+        <h1 className="t-display text-3xl text-paper">No order to display</h1>
         <p className="t-body mt-4 text-muted">
-          This page shows the summary right after you place an order.
+          This page shows a summary after placing an order.
         </p>
         <Link
           href="/product"
-          className="t-label mt-8 inline-flex min-h-12 items-center rounded-xs bg-lime px-7 text-xs text-ink hover:bg-paper"
+          className="t-label mt-8 inline-flex min-h-12 items-center rounded-xs bg-lime px-7 text-xs text-white hover:opacity-90"
         >
-          Pick a pack
+          Choose a pack
         </Link>
       </div>
     );
@@ -44,34 +44,31 @@ export default function ConfirmationPage() {
 
   return (
     <div className="mx-auto max-w-3xl px-5 py-20">
-      <p className="t-label text-xs text-lime">Order received</p>
+      <p className="t-label text-xs text-lime">Order confirmed</p>
       <h1 className="t-display mt-4 text-[clamp(2.25rem,5vw,3.5rem)] text-paper">
         Thanks, {order.name.split(" ")[0]}
       </h1>
 
       <div className="mt-10 rounded-xs border border-line bg-surface">
         <dl className="divide-y divide-line">
-          <Row label="Reference" value={order.reference} mono />
+          <Row label="Order reference" value={order.reference} mono />
           <Row label="Total" value={`${formatLKR(order.total)} for ${order.bars} bars`} mono />
           <Row
-            label="Placed by"
-            value={order.method === "pay" ? "Card payment on site" : "WhatsApp"}
+            label="Method"
+            value={order.method === "pay" ? "Simulated card payment" : "Via WhatsApp"}
           />
           <Row label="Phone" value={order.phone} />
-          <Row label="Delivering to" value={order.address} />
+          <Row label="Delivery address" value={order.address} />
         </dl>
       </div>
 
-      <div className="mt-8 rounded-xs border border-lime/40 bg-ink p-6">
-        <h2 className="t-display text-lg text-paper">What happens next</h2>
+      <div className="mt-8 rounded-xs border border-lime/40 bg-surface p-6">
+        <h2 className="t-display text-lg text-paper">What happens next?</h2>
         <p className="t-body mt-3 text-sm text-muted">
-          Someone from Muscula calls {order.phone} to confirm the address and arrange
-          delivery. There is no courier network yet, so deliveries are still handled
-          person to person.
+          The Muscula team will call {order.phone} to confirm the address and coordinate delivery.
         </p>
         <p className="t-body mt-4 text-sm text-lime">
-          Nothing above is real. This is a demonstration site, no payment was taken and
-          no order was placed.
+          This is a demo. No charges have been made.
         </p>
       </div>
 
@@ -79,7 +76,7 @@ export default function ConfirmationPage() {
         href="/"
         className="t-label mt-10 inline-flex min-h-12 items-center border-b border-lime pb-1 text-xs text-lime hover:text-paper"
       >
-        Back to the start
+        Back to home
       </Link>
     </div>
   );

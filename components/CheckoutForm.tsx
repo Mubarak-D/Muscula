@@ -24,10 +24,10 @@ export type StoredOrder = {
 const PHONE_PATTERN = "(\\+94|0)[0-9]{9}";
 
 const MESSAGES: Record<string, { valueMissing: string; patternMismatch?: string }> = {
-  name: { valueMissing: "Enter the name the order is for." },
-  address: { valueMissing: "Enter where the bars should go." },
+  name: { valueMissing: "Please enter the recipient's name." },
+  address: { valueMissing: "Please enter the delivery address." },
   phone: {
-    valueMissing: "Enter a phone number so delivery can be arranged.",
+    valueMissing: "Please enter a phone number.",
     patternMismatch: "Use 07XXXXXXXX or +947XXXXXXXX.",
   },
 };
@@ -78,8 +78,6 @@ export function CheckoutForm() {
     const form = formRef.current;
     if (!form || empty) return;
 
-    // The form carries noValidate so the browser's own bubbles stay out of the
-    // way, but constraint validation still runs. Messages render beside fields.
     const fields = Array.from(
       form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>("input[name], textarea[name]"),
     );
@@ -105,12 +103,10 @@ export function CheckoutForm() {
       bars,
     };
 
-    // Name, address and phone travel in sessionStorage rather than the URL.
-    // Even in a demo those do not belong in a query string or in history.
     try {
       window.sessionStorage.setItem(ORDER_KEY, JSON.stringify(order));
     } catch {
-      // Storage being unavailable should not strand the customer mid-checkout.
+      // Storage unavailable fallback
     }
 
     if (method === "whatsapp") {
@@ -133,7 +129,7 @@ export function CheckoutForm() {
           name="name"
           label="Full name"
           error={errors.name}
-          hint="Whoever will take the delivery."
+          hint="The person receiving the order."
         >
           <input
             id="name"
@@ -150,7 +146,7 @@ export function CheckoutForm() {
           name="address"
           label="Delivery address"
           error={errors.address}
-          hint="Street, town, and district."
+          hint="Street, city, and district."
         >
           <textarea
             id="address"
@@ -186,7 +182,7 @@ export function CheckoutForm() {
       <fieldset>
         <legend className="t-display mb-2 text-xl text-paper">How to order</legend>
         <p className="t-body mb-4 text-sm text-muted">
-          Both routes are built so the client can compare them. Neither charges a card.
+          Both methods are presented for demo purposes.
         </p>
 
         <div className="grid gap-3 sm:grid-cols-2">
@@ -195,14 +191,14 @@ export function CheckoutForm() {
             checked={method === "pay"}
             onChange={setMethod}
             title="Pay now"
-            body="Simulates an on site card payment and goes straight to confirmation."
+            body="Simulated card payment."
           />
           <MethodOption
             value="whatsapp"
             checked={method === "whatsapp"}
             onChange={setMethod}
-            title="Order on WhatsApp"
-            body="Opens WhatsApp with the order written out, ready for you to send."
+            title="Order via WhatsApp"
+            body="Redirects to WhatsApp with order details."
           />
         </div>
       </fieldset>
@@ -211,12 +207,12 @@ export function CheckoutForm() {
         <button
           type="submit"
           disabled={empty}
-          className="t-label inline-flex min-h-13 w-full items-center justify-center rounded-xs bg-lime px-8 py-4 text-xs text-ink transition-colors hover:bg-paper active:translate-y-px disabled:cursor-not-allowed disabled:bg-surface disabled:text-muted"
+          className="t-label inline-flex min-h-13 w-full items-center justify-center rounded-xs bg-lime px-8 py-4 text-xs text-white transition-colors hover:opacity-90 active:translate-y-px disabled:cursor-not-allowed disabled:bg-surface disabled:text-muted"
         >
-          {method === "pay" ? `Pay ${formatLKR(total)}` : "Send order on WhatsApp"}
+          {method === "pay" ? `Pay ${formatLKR(total)}` : "Order via WhatsApp"}
         </button>
         <p className="t-body mt-3 text-xs text-muted">
-          This is a demonstration. No payment is taken and no order is placed.
+          This is a demo. No charges will be made.
         </p>
       </div>
     </form>
