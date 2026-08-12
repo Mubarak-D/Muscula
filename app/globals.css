@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+/* Palette sampled from the brand assets, not invented.
+   #0A0A0A is the exact background of the logo file.
+   Lime is the logo's bolt. Moss is the green from their marketing chevrons,
+   and is only ever used for geometry, never for text: it fails contrast as a text colour. */
+@theme {
+  --color-ink: #0a0a0a;
+  --color-surface: #171717;
+  --color-line: #262626;
+  --color-lime: #c7f63d;
+  --color-moss: #309d04;
+  --color-muted: #8a8a8a;
+  --color-paper: #ffffff;
+
+  --font-display: var(--font-archivo), "Arial Narrow", system-ui, sans-serif;
+
+  --radius-xs: 2px;
+  --radius-sm: 2px;
+  --radius-md: 2px;
+}
+
+/* One family, three widths. The width axis carries the hierarchy instead of a
+   second typeface, which is why Barlow was dropped. font-variation-settings is
+   used rather than font-stretch so the axis is driven explicitly. */
+@layer components {
+  .t-display {
+    font-variation-settings: "wdth" 125, "wght" 900;
+    text-transform: uppercase;
+    letter-spacing: -0.015em;
+    line-height: 0.9;
+  }
+
+  .t-numeral {
+    font-variation-settings: "wdth" 125, "wght" 900;
+    line-height: 0.82;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .t-label {
+    font-variation-settings: "wdth" 75, "wght" 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+
+  .t-body {
+    font-variation-settings: "wdth" 100, "wght" 400;
+  }
+
+  .input {
+    width: 100%;
+    min-height: 3rem;
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--color-line);
+    background: var(--color-surface);
+    padding: 0.75rem 1rem;
+    color: var(--color-paper);
+    font-variation-settings: "wdth" 100, "wght" 400;
+    transition: border-color 150ms ease;
+  }
+
+  .input::placeholder {
+    color: var(--color-muted);
+  }
+
+  .input:hover {
+    border-color: var(--color-muted);
+  }
+
+  .input:focus {
+    border-color: var(--color-lime);
+  }
+}
+
+@layer base {
+  html {
+    background: var(--color-ink);
+    -webkit-text-size-adjust: 100%;
+    /* Has to sit on html as well as body. With it on body alone the document
+       element still scrolls, which showed up as a 1px sideways drag on mobile. */
+    overflow-x: hidden;
+  }
+
+  body {
+    background: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-display);
+    font-variation-settings: "wdth" 100, "wght" 400;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  /* Lime on near-black is 15.7:1, so the ring is legible without a halo. */
+  :focus-visible {
+    outline: 2px solid var(--color-lime);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-lime);
+    color: var(--color-ink);
+  }
+}
+
+@layer utilities {
+  /* The one decorative device: hard-edged angular slashes lifted from their own
+     marketing graphics. No glows, no gradients. */
+  .clip-slash {
+    clip-path: polygon(28% 0, 100% 0, 72% 100%, 0 100%);
+  }
+
+  .marquee-track {
+    animation: marquee 32s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Lime wipe between routes. CSS only, so it costs nothing and cannot get stuck. */
+@keyframes route-wipe {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  51% {
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+.route-wipe {
+  animation: route-wipe 620ms cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+
+  .route-wipe {
+    animation: none;
+    display: none;
+  }
+}

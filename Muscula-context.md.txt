@@ -1,0 +1,72 @@
+# Muscula Nutrition — Demo Site Context
+
+**Purpose of this doc:** Reference for building a *look-and-feel demo* only. Payment and delivery are NOT confirmed yet — mock these (fake "Pay Now" button, fake order confirmation) rather than wiring real integrations. Do not build production checkout logic against this doc.
+
+---
+
+## 1. Business Overview
+
+- **Brand name:** Muscula Nutrition
+- **Instagram:** @muscula.nutrition (226 followers, 85 following at time of writing)
+- **Parent company:** "A Product By JNR Marketing (Pvt) Ltd Company"
+- **Market:** Sri Lanka, gym/fitness audience
+- **Current distribution:** Supplying to gyms directly (B2B) — no consumer delivery network yet. This website is the brand's first move into direct-to-consumer (D2C) online sales.
+- **Brand positioning:** "Sri Lanka's first 27g high protein bar" — competing against imported protein bars, positioning around local-first + high protein content + taste ("the taste of a Snickers, the nutrition of a premium protein bar").
+
+## 2. Product Line
+
+**Single product category at launch: Protein Bars**
+
+| Attribute | Value |
+|---|---|
+| Protein | 27g |
+| Carbs | 40g |
+| Calories | 450 kcal |
+| Taste positioning | "Tastes like a Snickers" |
+| Claim | Sri Lanka's first 27g high protein bar |
+
+- No other product categories currently — do not build a multi-category nav, just a clean single-product/bundle layout.
+- Flavor/variant range: not yet confirmed — build the demo with 1 flavor placeholder, structure it so a variant selector can be added without redesign.
+
+## 3. Bundle / Promotional Offers
+
+Client explicitly wants bundle pricing shown prominently, e.g.:
+- 5 protein bars for LKR 6,000 (example given by client — use as placeholder pricing)
+- Design the product/pricing section to showcase single-unit price *and* bundle price side by side, bundle visually emphasized (e.g. "Best Value" badge) since this is their stated growth lever.
+
+## 4. Visual & Brand Assets (from Instagram)
+
+- Logo: bold wordmark "MUSCULA" in white/lime-green on black, lightning bolt accent through the "U", "NUTRITION" subtext underneath.
+- Color palette: black background, lime/neon green accent, white text — high-contrast, gym/energy aesthetic.
+- Photography style: gym environments, real people (ambassadors/athletes) holding product, product close-ups with dramatic lighting (bar shown with ingredients like cashews scattered around it).
+- Partnership content: seen collaborating with other local brands/events (e.g. "Vaaj", gym "Tranzformers" event) — suggests demo could include a small "As seen at" or partnerships strip for credibility.
+- Tone: energetic, no-nonsense, performance-focused — not a wellness/lifestyle brand, a hard-training/gym brand.
+
+## 5. Target Customer
+
+- Gym-goers and fitness-focused consumers in Sri Lanka.
+- Price-sensitive enough that bundle deals matter as a core purchase driver (not just an upsell).
+- Likely discovers brand via Instagram/gym presence rather than search — demo should assume traffic lands on a landing-style page, not a browse-heavy catalog.
+
+## 6. Required Pages (Demo Scope)
+
+1. **Home / Landing** — hero shot of the bar, headline claim ("Sri Lanka's First 27g High Protein Bar"), nutrition facts strip, CTA to buy.
+2. **Product Detail** — full nutrition breakdown, ingredients, "tastes like a Snickers" messaging, image gallery, unit price + bundle price options, quantity/bundle selector, Add to Cart / Buy Now.
+3. **Cart / Checkout (mocked)** — collects name, address, phone; shows order summary; "Pay Now" button that leads to a fake confirmation screen (no live payment gateway yet — client hasn't confirmed payment method).
+4. **Order Confirmation (mocked)** — thank-you screen with fake order number, "we'll contact you to arrange delivery" messaging (honest placeholder given no delivery network yet).
+5. **About / Brand story** — brief section on the brand, gym partnerships, credibility angle.
+
+## 7. Explicitly Out of Scope for Demo
+
+- Real payment gateway integration (PayHere etc.) — not confirmed.
+- Real courier/delivery integration — client has no delivery network yet (gym-supply only so far).
+- Admin dashboard / inventory management.
+- AI features of any kind — client explicitly said not needed at this stage.
+- Multi-category product navigation — single product line only.
+
+## 8. Open Questions Still Blocking a Real (Non-Demo) Build
+
+- Final decision: full on-site payment checkout vs. WhatsApp-order-approval flow (client is discussing internally).
+- Flavor/size variants, if any.
+- Chosen courier once they set up a delivery network.
+- Shipping cost/zone structure.
