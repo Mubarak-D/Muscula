@@ -21,9 +21,10 @@ function Numeral({ value }: { value: number }) {
 }
 
 /** The signature element, and the one place the brand lime covers real area: a
- *  full-bleed plate with the figures stamped into it in ink, the way markings are
- *  cast into a weight. Ink on lime is 15.7:1, which is the whole reason lime can
- *  be a ground here and never a typeface anywhere else.
+ *  full-bleed plate that hits hardest here because it is the only light thing on
+ *  a black page. The figures are stamped into it in the ground colour, the way
+ *  markings are cast into a weight — 15.7:1. Never `ink` on this plate: white on
+ *  lime is 1.4:1.
  *
  *  Column widths follow digit count rather than an even split, so 450 gets the
  *  room it needs. On a phone the three stay in one row: stacked, they were three
@@ -40,16 +41,16 @@ export function MacroBand() {
           <div
             key={macro.label}
             className={`flex flex-col justify-between gap-2 px-3 py-8 sm:gap-3 sm:px-5 sm:py-14 ${
-              i > 0 ? "border-l border-ink/15" : ""
+              i > 0 ? "border-l border-paper/15" : ""
             }`}
           >
-            <dd className="t-numeral flex items-baseline text-[clamp(2.1rem,10.5vw,8.5rem)] text-ink">
+            <dd className="t-numeral flex items-baseline text-[clamp(2.1rem,10.5vw,8.5rem)] text-paper">
               <Numeral value={macro.value} />
-              <span className="t-label ml-1 text-[0.2em] text-ink/70 sm:ml-2 sm:text-[0.18em]">
+              <span className="t-label ml-1 text-[0.2em] text-paper/70 sm:ml-2 sm:text-[0.18em]">
                 {macro.unit}
               </span>
             </dd>
-            <dt className="t-label text-[0.6rem] text-ink/70 sm:text-xs">{macro.label}</dt>
+            <dt className="t-label text-[0.6rem] text-paper/70 sm:text-xs">{macro.label}</dt>
           </div>
         ))}
       </dl>

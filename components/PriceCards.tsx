@@ -26,7 +26,7 @@ export function PriceCards() {
           against the single's 1px hairline. Lime is left to carry the badge,
           where it has ink on top of it. */}
       <article className="relative flex flex-col justify-between rounded-xs border-2 border-ink bg-surface p-6 sm:p-8 lg:p-10">
-        <span className="t-label absolute -top-2.5 left-6 bg-lime px-2.5 py-1 text-[0.6rem] text-ink sm:left-8">
+        <span className="t-label absolute -top-2.5 left-6 bg-lime px-2.5 py-1 text-[0.6rem] text-paper sm:left-8">
           {bundle.badge}
         </span>
 

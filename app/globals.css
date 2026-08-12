@@ -1,22 +1,25 @@
 @import "tailwindcss";
 
-/* Light system. The ground is warm off-white rather than #fff: this gets read on
-   a phone, often outdoors, and paper is easier to sit on than a lit panel.
+/* Dark system. The ground is warm near-black rather than #000: pure black against
+   a 900-weight display face vibrates, and the product photography is already shot
+   on a warm dark ground, so the page and the images share a floor.
 
-   The one binding rule: LIME IS A FILL, NEVER A TEXT COLOUR. #C7F63D is the
-   logo's bolt and it is 1.6:1 against the ground, so as type it is unreadable.
-   As a plate with ink on top it is 15.7:1. Chips, the macro plate, the chevron
-   geometry, the nav underline, the selection highlight. Nowhere else.
-   Moss is the second green from their marketing chevrons and is geometry only. */
+   Names stay semantic. `paper` is the ground and `ink` is the type, whichever way
+   round the values run: that is what makes a flip like this eight values instead
+   of a rewrite. Do not swap the names to match the new luminance.
+
+   Lime is now free to be type — on this ground it is 14:1, and a lime bolt on
+   black is the real lockup. The one thing it cannot carry is the reverse: on a
+   lime plate the foreground must be `paper`, never `ink`. */
 @theme {
-  --color-paper: #fafaf7;
-  --color-surface: #ffffff;
-  --color-line: #e4e2db;
-  --color-ink: #0a0a0a;
-  --color-muted: #57534e;
+  --color-paper: #0b0b0a;
+  --color-surface: #151513;
+  --color-line: #2b2b26;
+  --color-ink: #fafaf7;
+  --color-muted: #a8a29e;
   --color-lime: #c7f63d;
   --color-moss: #309d04;
-  --color-alert: #b42318;
+  --color-alert: #f97066;
 
   --font-display: var(--font-archivo), "Arial Narrow", system-ui, sans-serif;
 
@@ -111,7 +114,6 @@
     overflow-x: hidden;
   }
 
-  /* Ink, not lime. Lime on paper is 1.6:1, which is not a focus ring. */
   :focus-visible {
     outline: 2px solid var(--color-ink);
     outline-offset: 3px;
@@ -119,7 +121,7 @@
 
   ::selection {
     background: var(--color-lime);
-    color: var(--color-ink);
+    color: var(--color-paper);
   }
 }
 
@@ -132,21 +134,6 @@
 
   .marquee-track {
     animation: marquee 32s linear infinite;
-  }
-
-  /* Lime laid behind text like a marker stroke, sized to the text box. This is
-     the only way lime gets near type without being type. */
-  .swipe {
-    position: relative;
-    isolation: isolate;
-  }
-
-  .swipe::before {
-    content: "";
-    position: absolute;
-    inset: -0.15em -0.28em;
-    z-index: -1;
-    background: var(--color-lime);
   }
 
   /* Bottom bar clearance on iOS, where the home indicator eats the last 34px. */

@@ -45,7 +45,7 @@ export default function ConfirmationPage() {
   return (
     <div className="mx-auto max-w-3xl px-5 py-14 sm:py-20">
       <p>
-        <span className="t-label inline-flex bg-lime px-2.5 py-1 text-[0.65rem] text-ink">
+        <span className="t-label inline-flex bg-lime px-2.5 py-1 text-[0.65rem] text-paper">
           Order confirmed
         </span>
       </p>

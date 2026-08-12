@@ -1,0 +1,195 @@
+- generic [active] [ref=f3e1]:
+  - link "Skip to content" [ref=f3e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f3e3]:
+    - generic [ref=f3e4]:
+      - link "Muscula Nutrition, home" [ref=f3e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f3e6]:
+          - generic [ref=f3e7]:
+            - text: MUSCUA
+            - generic [ref=f3e11]: ®
+          - generic [ref=f3e12]: Nutrition
+      - navigation "Main" [ref=f3e13]:
+        - link "The bar" [ref=f3e14] [cursor=pointer]:
+          - /url: /product
+        - link "About" [ref=f3e15] [cursor=pointer]:
+          - /url: /about
+        - link "Cart 0 items in cart" [ref=f3e16] [cursor=pointer]:
+          - /url: /cart
+          - text: Cart
+          - generic [ref=f3e17]: "0"
+          - generic [ref=f3e18]: 0 items in cart
+  - main [ref=f3e19]:
+    - generic [ref=f3e21]:
+      - generic [ref=f3e22]:
+        - paragraph [ref=f3e23]:
+          - generic [ref=f3e24]: Made in Sri Lanka
+        - heading "Sri Lanka’s first 27g protein bar" [level=1] [ref=f3e25]:
+          - generic [ref=f3e26]: Sri Lanka’s first
+          - generic [ref=f3e27]: 27g protein bar
+      - generic [ref=f3e28]:
+        - paragraph [ref=f3e29]: The taste of a Snickers, the nutrition of a premium protein bar.
+        - generic [ref=f3e30]:
+          - link "Buy a 5 pack" [ref=f3e31] [cursor=pointer]:
+            - /url: /product
+          - link "See the numbers" [ref=f3e32] [cursor=pointer]:
+            - /url: /product
+      - figure [ref=f3e33]:
+        - img "Muscula protein bar broken open, showing cashew and oat centre under a chocolate coating" [ref=f3e34]
+        - generic [ref=f3e35]:
+          - generic [ref=f3e36]:
+            - paragraph [ref=f3e37]: 27g
+            - paragraph [ref=f3e38]: Protein
+          - generic [ref=f3e39]:
+            - paragraph [ref=f3e40]: 40g
+            - paragraph [ref=f3e41]: Carbs
+          - generic [ref=f3e42]:
+            - paragraph [ref=f3e43]: 450kcal
+            - paragraph [ref=f3e44]: Energy
+    - region [ref=f3e45]:
+      - heading "Nutrition per bar" [level=2] [ref=f3e46]
+      - generic [ref=f3e47]:
+        - generic [ref=f3e48]:
+          - definition [ref=f3e49]:
+            - generic [ref=f3e50]: "1"
+            - generic [ref=f3e51]: g
+          - term [ref=f3e52]: Protein
+        - generic [ref=f3e53]:
+          - definition [ref=f3e54]:
+            - generic [ref=f3e55]: "1"
+            - generic [ref=f3e56]: g
+          - term [ref=f3e57]: Carbs
+        - generic [ref=f3e58]:
+          - definition [ref=f3e59]:
+            - generic [ref=f3e60]: "15"
+            - generic [ref=f3e61]: kcal
+          - term [ref=f3e62]: Energy
+    - generic [ref=f3e64]:
+      - img "Athlete holding a wrapped Muscula protein bar on a rooftop" [ref=f3e66]
+      - generic [ref=f3e67]:
+        - heading "Built for the people who actually train" [level=2] [ref=f3e68]
+        - paragraph [ref=f3e69]: Muscula started by going direct to gyms. Trainers and athletes tried it and asked how to get a box. Our focus has always been high protein count over artificial flavouring.
+        - paragraph [ref=f3e70]: Imported protein bars come at a premium. Made right here in Sri Lanka, this one delivers great chocolate taste.
+        - link "Read our story" [ref=f3e71] [cursor=pointer]:
+          - /url: /about
+    - generic [ref=f3e73]:
+      - heading "Buy by the pack" [level=2] [ref=f3e74]
+      - paragraph [ref=f3e75]: Grab a single bar to try, or save with the 5 bar pack.
+      - generic [ref=f3e77]:
+        - article [ref=f3e78]:
+          - generic [ref=f3e79]: Best value
+          - generic [ref=f3e80]:
+            - heading "5 bar pack" [level=3] [ref=f3e81]
+            - paragraph [ref=f3e82]: LKR 6,000
+            - paragraph [ref=f3e83]: That’s LKR 1,200 per bar. Save LKR 1,000 vs buying singles.
+          - button "Buy the 5 pack" [ref=f3e84]
+        - article [ref=f3e85]:
+          - generic [ref=f3e86]:
+            - heading "Single bar" [level=3] [ref=f3e87]
+            - paragraph [ref=f3e88]: LKR 1,400
+            - paragraph [ref=f3e89]: One bar, LKR 1,400 per bar.
+          - button "Buy a single bar" [ref=f3e90]
+    - region [ref=f3e91]:
+      - heading "Collaborations & events" [level=2] [ref=f3e92]
+      - list [ref=f3e94]:
+        - listitem [ref=f3e95]:
+          - img "A tray of Muscula bars handed over at the Tranzformers gym" [ref=f3e96]
+          - generic [ref=f3e97]:
+            - paragraph [ref=f3e98]: Tranzformers
+            - paragraph [ref=f3e99]: Gym event partner
+        - listitem [ref=f3e100]:
+          - img "Muscula bars handed over at a Vaaj brand collaboration" [ref=f3e101]
+          - generic [ref=f3e102]:
+            - paragraph [ref=f3e103]: Vaaj
+            - paragraph [ref=f3e104]: Brand collaboration
+        - listitem [ref=f3e105]:
+          - img "A tray of Muscula bars handed over at the Tranzformers gym" [ref=f3e106]
+          - generic [ref=f3e107]:
+            - paragraph [ref=f3e108]: Tranzformers
+            - paragraph [ref=f3e109]: Gym event partner
+        - listitem [ref=f3e110]:
+          - img "Muscula bars handed over at a Vaaj brand collaboration" [ref=f3e111]
+          - generic [ref=f3e112]:
+            - paragraph [ref=f3e113]: Vaaj
+            - paragraph [ref=f3e114]: Brand collaboration
+        - listitem [ref=f3e115]:
+          - img "A tray of Muscula bars handed over at the Tranzformers gym" [ref=f3e116]
+          - generic [ref=f3e117]:
+            - paragraph [ref=f3e118]: Tranzformers
+            - paragraph [ref=f3e119]: Gym event partner
+        - listitem [ref=f3e120]:
+          - img "Muscula bars handed over at a Vaaj brand collaboration" [ref=f3e121]
+          - generic [ref=f3e122]:
+            - paragraph [ref=f3e123]: Vaaj
+            - paragraph [ref=f3e124]: Brand collaboration
+        - listitem [ref=f3e125]:
+          - img "A tray of Muscula bars handed over at the Tranzformers gym" [ref=f3e126]
+          - generic [ref=f3e127]:
+            - paragraph [ref=f3e128]: Tranzformers
+            - paragraph [ref=f3e129]: Gym event partner
+        - listitem [ref=f3e130]:
+          - img "Muscula bars handed over at a Vaaj brand collaboration" [ref=f3e131]
+          - generic [ref=f3e132]:
+            - paragraph [ref=f3e133]: Vaaj
+            - paragraph [ref=f3e134]: Brand collaboration
+        - listitem [ref=f3e135]:
+          - generic [ref=f3e136]:
+            - paragraph [ref=f3e137]: Tranzformers
+            - paragraph [ref=f3e138]: Gym event partner
+        - listitem [ref=f3e139]:
+          - generic [ref=f3e140]:
+            - paragraph [ref=f3e141]: Vaaj
+            - paragraph [ref=f3e142]: Brand collaboration
+        - listitem [ref=f3e143]:
+          - generic [ref=f3e144]:
+            - paragraph [ref=f3e145]: Tranzformers
+            - paragraph [ref=f3e146]: Gym event partner
+        - listitem [ref=f3e147]:
+          - generic [ref=f3e148]:
+            - paragraph [ref=f3e149]: Vaaj
+            - paragraph [ref=f3e150]: Brand collaboration
+        - listitem [ref=f3e151]:
+          - generic [ref=f3e152]:
+            - paragraph [ref=f3e153]: Tranzformers
+            - paragraph [ref=f3e154]: Gym event partner
+        - listitem [ref=f3e155]:
+          - generic [ref=f3e156]:
+            - paragraph [ref=f3e157]: Vaaj
+            - paragraph [ref=f3e158]: Brand collaboration
+        - listitem [ref=f3e159]:
+          - generic [ref=f3e160]:
+            - paragraph [ref=f3e161]: Tranzformers
+            - paragraph [ref=f3e162]: Gym event partner
+        - listitem [ref=f3e163]:
+          - generic [ref=f3e164]:
+            - paragraph [ref=f3e165]: Vaaj
+            - paragraph [ref=f3e166]: Brand collaboration
+    - generic [ref=f3e168]:
+      - heading "27 grams. One bar." [level=2] [ref=f3e169]
+      - link "Choose a pack" [ref=f3e170] [cursor=pointer]:
+        - /url: /product
+  - contentinfo [ref=f3e171]:
+    - generic [ref=f3e172]:
+      - generic [ref=f3e173]:
+        - generic [ref=f3e174]:
+          - generic [ref=f3e175]:
+            - text: MUSCUA
+            - generic [ref=f3e179]: ®
+          - generic [ref=f3e180]: Nutrition
+        - paragraph [ref=f3e181]: A product of JNR Marketing (Pvt) Ltd. Made in Sri Lanka, delivered to gyms island-wide.
+      - navigation "Footer" [ref=f3e182]:
+        - generic [ref=f3e183]:
+          - heading "Shop" [level=2] [ref=f3e184]
+          - link "The bar" [ref=f3e185] [cursor=pointer]:
+            - /url: /product
+          - link "Cart" [ref=f3e186] [cursor=pointer]:
+            - /url: /cart
+        - generic [ref=f3e187]:
+          - heading "Brand" [level=2] [ref=f3e188]
+          - link "About" [ref=f3e189] [cursor=pointer]:
+            - /url: /about
+          - link "Instagram" [ref=f3e190] [cursor=pointer]:
+            - /url: https://www.instagram.com/muscula.nutrition/
+    - paragraph [ref=f3e192]: Demo site. Ordering and payments are simulated.
+  - alert [ref=f3e193]

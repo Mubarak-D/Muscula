@@ -18,8 +18,8 @@ export function Chevrons({
             // Stepping the heights makes the group read as a stacked cut, the
             // way their own graphics use it, rather than as even stripes.
             height: `${100 - i * 22}%`,
-            // Solid, alternating between the two greens. Fading them worked on
-            // black; on paper a 56% moss just reads as a rendering mistake.
+            // Solid, alternating between the two greens. Fading them is the
+            // softer option and their vocabulary is not soft.
             backgroundColor: i % 2 === 0 ? "var(--color-lime)" : "var(--color-moss)",
           }}
         />

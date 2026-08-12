@@ -23,11 +23,9 @@ export function Logo({ className = "" }: { className?: string }) {
     <span className={`inline-flex flex-col leading-none ${className}`}>
       <span className="t-display flex items-center text-[1.15rem] text-ink">
         MUSCU
-        {/* The real lockup is a lime bolt on black. On paper that inverts: the
-            bolt stays ink and the lime becomes the tab it sits on, which is the
-            only way the brand colour survives a light ground at this size. */}
-        <span className="swipe mx-[0.16em] inline-flex">
-          <Bolt className="h-[0.86em] w-[0.58em] text-ink" />
+        {/* The real lockup: a lime bolt on black, no underlay needed. */}
+        <span className="mx-[0.16em] inline-flex">
+          <Bolt className="h-[0.86em] w-[0.58em] text-lime" />
         </span>
         A
         <span className="t-label ml-[0.25em] self-start text-[0.4em] text-muted">®</span>

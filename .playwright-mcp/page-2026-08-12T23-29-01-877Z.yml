@@ -1,0 +1,101 @@
+- generic [active] [ref=f6e1]:
+  - link "Skip to content" [ref=f6e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f6e3]:
+    - generic [ref=f6e4]:
+      - link "Muscula Nutrition, home" [ref=f6e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f6e6]:
+          - generic [ref=f6e7]:
+            - text: MUSCUA
+            - generic [ref=f6e11]: ®
+          - generic [ref=f6e12]: Nutrition
+      - navigation "Main" [ref=f6e13]:
+        - link "The bar" [ref=f6e14] [cursor=pointer]:
+          - /url: /product
+        - link "About" [ref=f6e15] [cursor=pointer]:
+          - /url: /about
+        - link "Cart 1 item in cart" [ref=f6e135] [cursor=pointer]:
+          - /url: /cart
+          - text: Cart
+          - generic [ref=f6e17]: "1"
+          - generic [ref=f6e18]: 1 item in cart
+  - main [ref=f6e19]:
+    - generic [ref=f6e136]:
+      - heading "Your order" [level=1] [ref=f6e137]
+      - paragraph [ref=f6e138]: Review your order details and delivery information.
+      - generic [ref=f6e139]:
+        - region [ref=f6e140]:
+          - heading "Items" [level=2] [ref=f6e141]
+          - generic [ref=f6e142]:
+            - list [ref=f6e143]:
+              - listitem [ref=f6e144]:
+                - generic [ref=f6e145]:
+                  - paragraph [ref=f6e146]: 5 bar pack
+                  - paragraph [ref=f6e147]: 5 bars per pack
+                - generic [ref=f6e148]:
+                  - button "Reduce 5 bar pack quantity" [ref=f6e149]: −
+                  - generic "5 bar pack quantity" [ref=f6e150]: "1"
+                  - button "Increase 5 bar pack quantity" [ref=f6e151]: +
+                - paragraph [ref=f6e152]: LKR 6,000
+            - generic [ref=f6e153]:
+              - generic [ref=f6e154]:
+                - generic [ref=f6e155]: Total, 5 bars
+                - generic [ref=f6e156]: LKR 6,000
+              - paragraph [ref=f6e157]: Delivery is coordinated by phone after your order.
+        - region [ref=f6e158]:
+          - heading "Checkout" [level=2] [ref=f6e159]
+          - generic [ref=f6e160]:
+            - group "Delivery details" [ref=f6e161]:
+              - generic [ref=f6e163]:
+                - generic [ref=f6e164]: Full name
+                - textbox "Full name" [ref=f6e165]
+                - paragraph [ref=f6e166]: The person receiving the order.
+              - generic [ref=f6e167]:
+                - generic [ref=f6e168]: Delivery address
+                - textbox "Delivery address" [ref=f6e169]
+                - paragraph [ref=f6e170]: Street, city, and district.
+              - generic [ref=f6e171]:
+                - generic [ref=f6e172]: Phone number
+                - textbox "Phone number" [ref=f6e173]
+                - paragraph [ref=f6e174]: 07XXXXXXXX or +947XXXXXXXX.
+            - group "How to order" [ref=f6e175]:
+              - paragraph [ref=f6e177]: Both methods are presented for demo purposes.
+              - generic [ref=f6e178]:
+                - generic [ref=f6e179] [cursor=pointer]:
+                  - generic [ref=f6e180]:
+                    - radio "Pay now Simulated card payment." [checked] [ref=f6e181]
+                    - generic [ref=f6e182]: Pay now
+                  - generic [ref=f6e183]: Simulated card payment.
+                - generic [ref=f6e184] [cursor=pointer]:
+                  - generic [ref=f6e185]:
+                    - radio "Order via WhatsApp Redirects to WhatsApp with order details." [ref=f6e186]
+                    - generic [ref=f6e187]: Order via WhatsApp
+                  - generic [ref=f6e188]: Redirects to WhatsApp with order details.
+            - generic [ref=f6e189]:
+              - button "Pay LKR 6,000" [ref=f6e190]
+              - paragraph [ref=f6e191]: This is a demo. No charges will be made.
+  - contentinfo [ref=f6e112]:
+    - generic [ref=f6e113]:
+      - generic [ref=f6e114]:
+        - generic [ref=f6e115]:
+          - generic [ref=f6e116]:
+            - text: MUSCUA
+            - generic [ref=f6e120]: ®
+          - generic [ref=f6e121]: Nutrition
+        - paragraph [ref=f6e122]: A product of JNR Marketing (Pvt) Ltd. Made in Sri Lanka, delivered to gyms island-wide.
+      - navigation "Footer" [ref=f6e123]:
+        - generic [ref=f6e124]:
+          - heading "Shop" [level=2] [ref=f6e125]
+          - link "The bar" [ref=f6e126] [cursor=pointer]:
+            - /url: /product
+          - link "Cart" [ref=f6e127] [cursor=pointer]:
+            - /url: /cart
+        - generic [ref=f6e128]:
+          - heading "Brand" [level=2] [ref=f6e129]
+          - link "About" [ref=f6e130] [cursor=pointer]:
+            - /url: /about
+          - link "Instagram" [ref=f6e131] [cursor=pointer]:
+            - /url: https://www.instagram.com/muscula.nutrition/
+    - paragraph [ref=f6e133]: Demo site. Ordering and payments are simulated.
+  - alert [ref=f6e134]: Cart | Muscula Nutrition

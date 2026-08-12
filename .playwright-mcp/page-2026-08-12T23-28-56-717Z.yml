@@ -1,0 +1,134 @@
+- generic [active] [ref=f6e1]:
+  - link "Skip to content" [ref=f6e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f6e3]:
+    - generic [ref=f6e4]:
+      - link "Muscula Nutrition, home" [ref=f6e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f6e6]:
+          - generic [ref=f6e7]:
+            - text: MUSCUA
+            - generic [ref=f6e11]: ®
+          - generic [ref=f6e12]: Nutrition
+      - navigation "Main" [ref=f6e13]:
+        - link "The bar" [ref=f6e14] [cursor=pointer]:
+          - /url: /product
+        - link "About" [ref=f6e15] [cursor=pointer]:
+          - /url: /about
+        - link "Cart 0 items in cart" [ref=f6e16] [cursor=pointer]:
+          - /url: /cart
+          - text: Cart
+          - generic [ref=f6e17]: "0"
+          - generic [ref=f6e18]: 0 items in cart
+  - main [ref=f6e19]:
+    - generic [ref=f6e20]:
+      - generic [ref=f6e21]:
+        - img "Muscula protein bar broken open, showing cashew and oat centre under a chocolate coating" [ref=f6e23]
+        - list [ref=f6e24]:
+          - listitem [ref=f6e25]:
+            - img "Muscula protein bar broken open, showing cashew and oat centre under a chocolate coating" [ref=f6e26]
+          - listitem [ref=f6e27]:
+            - img "Athlete holding a wrapped Muscula protein bar on a rooftop" [ref=f6e28]
+          - listitem [ref=f6e29]:
+            - img "Two lifters training on a gym floor in Muscula shirts" [ref=f6e30]
+      - generic [ref=f6e31]:
+        - paragraph [ref=f6e32]:
+          - generic [ref=f6e33]: Original cashew chocolate
+        - heading "Muscula Protein Bar" [level=1] [ref=f6e34]
+        - paragraph [ref=f6e35]: Great taste meets premium nutrition. Chocolate-coated, packed with cashew, and loaded with 27g of protein.
+        - generic [ref=f6e36]:
+          - generic [ref=f6e37]:
+            - definition [ref=f6e38]: 27g
+            - term [ref=f6e39]: Protein
+          - generic [ref=f6e40]:
+            - definition [ref=f6e41]: 40g
+            - term [ref=f6e42]: Carbs
+          - generic [ref=f6e43]:
+            - definition [ref=f6e44]: 450kcal
+            - term [ref=f6e45]: Energy
+        - generic [ref=f6e47]:
+          - group "Choose a pack" [ref=f6e48]:
+            - generic [ref=f6e50]:
+              - generic [ref=f6e51] [cursor=pointer]:
+                - generic [ref=f6e52]:
+                  - radio "Single bar LKR 1,400 per bar LKR 1,400" [ref=f6e53]
+                  - generic [ref=f6e54]:
+                    - generic [ref=f6e55]: Single bar
+                    - generic [ref=f6e56]: LKR 1,400 per bar
+                - generic [ref=f6e57]: LKR 1,400
+              - generic [ref=f6e58] [cursor=pointer]:
+                - generic [ref=f6e59]:
+                  - radio "5 bar pack LKR 1,200 per bar, save LKR 1,000 LKR 6,000" [checked] [ref=f6e60]
+                  - generic [ref=f6e61]:
+                    - generic [ref=f6e62]: 5 bar pack
+                    - generic [ref=f6e63]: LKR 1,200 per bar, save LKR 1,000
+                - generic [ref=f6e64]: LKR 6,000
+          - generic [ref=f6e65]:
+            - button "Add to cart" [ref=f6e66]
+            - button "Buy now" [ref=f6e67]
+          - generic [ref=f6e69]:
+            - generic [ref=f6e70]:
+              - paragraph [ref=f6e71]: 5 bar pack
+              - paragraph [ref=f6e72]: LKR 6,000
+            - button "Buy now" [ref=f6e73]
+    - generic [ref=f6e75]:
+      - generic [ref=f6e76]:
+        - heading "Nutrition per bar" [level=2] [ref=f6e77]
+        - paragraph [ref=f6e78]: Nutrition facts panel.
+        - table [ref=f6e79]:
+          - rowgroup [ref=f6e80]:
+            - row [ref=f6e81]:
+              - rowheader "Energy" [ref=f6e82]
+              - cell "450 kcal" [ref=f6e83]
+            - row [ref=f6e84]:
+              - rowheader "Protein" [ref=f6e85]
+              - cell "27 g" [ref=f6e86]
+            - row [ref=f6e87]:
+              - rowheader "Carbohydrate" [ref=f6e88]
+              - cell "40 g" [ref=f6e89]
+            - row [ref=f6e90]:
+              - rowheader "of which sugars" [ref=f6e91]
+              - cell "18 g" [ref=f6e92]
+            - row [ref=f6e93]:
+              - rowheader "Fat" [ref=f6e94]
+              - cell "16 g" [ref=f6e95]
+            - row [ref=f6e96]:
+              - rowheader "of which saturates" [ref=f6e97]
+              - cell "7 g" [ref=f6e98]
+            - row [ref=f6e99]:
+              - rowheader "Fibre" [ref=f6e100]
+              - cell "4 g" [ref=f6e101]
+            - row [ref=f6e102]:
+              - rowheader "Salt" [ref=f6e103]
+              - cell "0.4 g" [ref=f6e104]
+      - generic [ref=f6e105]:
+        - heading "Ingredients" [level=2] [ref=f6e106]
+        - paragraph [ref=f6e107]: Milk chocolate coating, whey protein blend, roasted cashew, oats, glucose syrup, cocoa butter, natural flavouring, sea salt.
+        - heading "Flavours" [level=3] [ref=f6e108]
+        - list [ref=f6e109]:
+          - listitem [ref=f6e110]: Original cashew chocolate
+          - listitem [ref=f6e111]: More flavours coming soon
+  - contentinfo [ref=f6e112]:
+    - generic [ref=f6e113]:
+      - generic [ref=f6e114]:
+        - generic [ref=f6e115]:
+          - generic [ref=f6e116]:
+            - text: MUSCUA
+            - generic [ref=f6e120]: ®
+          - generic [ref=f6e121]: Nutrition
+        - paragraph [ref=f6e122]: A product of JNR Marketing (Pvt) Ltd. Made in Sri Lanka, delivered to gyms island-wide.
+      - navigation "Footer" [ref=f6e123]:
+        - generic [ref=f6e124]:
+          - heading "Shop" [level=2] [ref=f6e125]
+          - link "The bar" [ref=f6e126] [cursor=pointer]:
+            - /url: /product
+          - link "Cart" [ref=f6e127] [cursor=pointer]:
+            - /url: /cart
+        - generic [ref=f6e128]:
+          - heading "Brand" [level=2] [ref=f6e129]
+          - link "About" [ref=f6e130] [cursor=pointer]:
+            - /url: /about
+          - link "Instagram" [ref=f6e131] [cursor=pointer]:
+            - /url: https://www.instagram.com/muscula.nutrition/
+    - paragraph [ref=f6e133]: Demo site. Ordering and payments are simulated.
+  - alert [ref=f6e134]

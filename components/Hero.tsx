@@ -34,7 +34,7 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl gap-8 px-5 pt-10 pb-14 sm:pt-16 lg:grid-cols-[1.3fr_0.7fr] lg:items-start lg:gap-x-14 lg:gap-y-9 lg:pt-24 lg:pb-20">
         <div className="lg:col-start-1 lg:row-start-1">
           <p data-hero-line className="mb-6">
-            <span className="t-label inline-flex bg-lime px-2.5 py-1 text-[0.65rem] text-ink">
+            <span className="t-label inline-flex bg-lime px-2.5 py-1 text-[0.65rem] text-paper">
               Made in Sri Lanka
             </span>
           </p>

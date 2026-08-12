@@ -48,7 +48,7 @@ export default function ProductPage() {
 
         <div>
           <p>
-            <span className="t-label inline-flex bg-lime px-2.5 py-1 text-[0.65rem] text-ink">
+            <span className="t-label inline-flex bg-lime px-2.5 py-1 text-[0.65rem] text-paper">
               {FLAVORS[0].name}
             </span>
           </p>
@@ -117,7 +117,7 @@ export default function ProductPage() {
               {FLAVORS.map((flavor) => (
                 <li
                   key={flavor.id}
-                  className="t-label rounded-xs bg-lime px-4 py-2 text-xs text-ink"
+                  className="t-label rounded-xs bg-lime px-4 py-2 text-xs text-paper"
                 >
                   {flavor.name}
                 </li>
